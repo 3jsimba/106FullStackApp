@@ -56,20 +56,6 @@ const PostEditor = () => {
   return (
     <Card>
       <Stack spacing={1}>
-        {user && (
-          <HorizontalStack spacing={2}>
-            <UserAvatar width={50} height={50} username={user.username} />
-            <Typography variant="h5">
-              What would you like to post today {user.username}?
-            </Typography>
-          </HorizontalStack>
-        )}
-
-        <Typography>
-          <a href="https://commonmark.org/help/" target="_blank">
-            Markdown Help
-          </a>
-        </Typography>
 
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
