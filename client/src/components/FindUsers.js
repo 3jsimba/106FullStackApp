@@ -10,8 +10,9 @@ import { AiOutlineUser } from "react-icons/ai";
 import { MdRefresh } from "react-icons/md";
 import { getRandomUsers } from "../api/users";
 import Loading from "./Loading";
+import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
-import UserEntry from "./UserEntry";
+import UserEntry from "./user/UserEntry";
 
 const FindUsers = () => {
   const [loading, setLoading] = useState(true);

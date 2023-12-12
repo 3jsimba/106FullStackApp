@@ -1,10 +1,10 @@
 import { Button, Card, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { getUserComments } from "../api/posts";
-import { isLoggedIn } from "../helpers/authHelper";
+import { getUserComments } from "../../api/posts";
+import { isLoggedIn } from "../../helpers/authHelper";
 import Comment from "./Comment";
-import Loading from "./Loading";
-import SortBySelect from "./SortBySelect";
+import Loading from "../Loading";
+import SortBySelect from "../SortBySelect";
 
 const CommentBrowser = (props) => {
   const [comments, setComments] = useState([]);
