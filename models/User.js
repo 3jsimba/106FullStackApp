@@ -39,14 +39,6 @@ const UserSchema = new mongoose.Schema(
 );
 
 UserSchema.pre("save", function (next) {
-  if (filter.isProfane(this.username)) {
-    throw new Error("Username cannot contain profanity");
-  }
-
-  if (this.biography.length > 0) {
-    this.biography = filter.clean(this.biography);
-  }
-
   next();
 });
 
