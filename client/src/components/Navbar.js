@@ -10,7 +10,8 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import "react-icons/ai";
 import "react-icons/ri";
-import NewLogo from '/Users/rvfimac/Documents/rUni/Y4T1/106FullStackApp/client/src/nharts black.jpg'; // Adjust the path as necessary
+// import NewLogo from ''; // Adjust the path as necessary
+import NewLogo from '../../src/nharts.jpg'
 
 import {
   AiFillHome,
