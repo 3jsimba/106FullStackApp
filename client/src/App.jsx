@@ -1,3 +1,5 @@
+import './App.css';
+import react from "react";
 import "@mui/material";
 import "react-icons";
 import "react-icons/bi";
@@ -25,9 +27,6 @@ import ExploreView from "./components/views/ExploreView";
 import PrivateRoute from "./components/PrivateRoute";
 import SearchView from "./components/views/SearchView";
 import { initiateSocketConnection, socket } from "./helpers/socketHelper";
-import { useEffect } from "react";
-import { BASE_URL } from "./config";
-import { io } from "socket.io-client";
 
 function App() {
   initiateSocketConnection();

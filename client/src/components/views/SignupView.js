@@ -11,8 +11,9 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { signup } from "../../api/users";
 import { loginUser } from "../../helpers/authHelper";
-import { useNavigate } from "react-router-dom";
-import Copyright from "../Copyright";
+
+import { useNavigate, Router, Routs } from "react-router-dom";
+
 import ErrorAlert from "../ErrorAlert";
 import { isLength, isEmail, contains } from "validator";
 
@@ -76,7 +77,7 @@ const SignupView = () => {
       <Stack alignItems="center">
         <Typography variant="h2" color="text.secondary" sx={{ mb: 6 }}>
           <Link to="/" color="inherit" underline="none">
-            PostIt
+            SoundWaveCentral
           </Link>
         </Typography>
         <Typography variant="h5" gutterBottom>
@@ -129,7 +130,6 @@ const SignupView = () => {
           </Button>
         </Box>
         <Box sx={{ mt: 3 }}>
-          <Copyright />
         </Box>
       </Stack>
     </Container>

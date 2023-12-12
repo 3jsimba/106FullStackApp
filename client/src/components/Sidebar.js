@@ -5,7 +5,7 @@ import { getPosts } from "../api/posts";
 import { isLoggedIn } from "../helpers/authHelper";
 import FindUsers from "./FindUsers";
 import Loading from "./Loading";
-import PostCard from "./PostCard";
+import PostCard from "./post/PostCard";
 
 const Sidebar = () => {
   return (
