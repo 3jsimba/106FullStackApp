@@ -7,10 +7,6 @@ import CommentBrowser from "../comments/CommentBrowser";
 
 import ErrorAlert from "../ErrorAlert";
 import FindUsers from "../FindUsers";
-// import react from "react";
-
-// import GoBack from "../GoBack";
-import GoBack from "../GoBack";
 import GridLayout from "../GridLayout";
 import Loading from "../Loading";
 import MobileProfile from "../MobileProfile";
@@ -77,7 +73,6 @@ const ProfileView = () => {
   return (
     <Container>
       <Navbar />
-
       <GridLayout
         left={
           <>
@@ -90,7 +85,6 @@ const ProfileView = () => {
               {profile ? (
                 <>
                   <ProfileTabs tab={tab} setTab={setTab} />
-
                   {tabs[tab]}
                 </>
               ) : (
@@ -113,6 +107,7 @@ const ProfileView = () => {
       />
     </Container>
   );
+  
 };
 
 export default ProfileView;
