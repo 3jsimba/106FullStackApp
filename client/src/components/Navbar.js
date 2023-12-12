@@ -10,9 +10,9 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import "react-icons/ai";
 import "react-icons/ri";
+import NewLogo from '/Users/rvfimac/Documents/rUni/Y4T1/106FullStackApp/client/src/nharts black.jpg'; // Adjust the path as necessary
 
 import {
-  AiFillFileText,
   AiFillHome,
   AiOutlineSearch,
 } from "react-icons/ai";
@@ -76,10 +76,7 @@ const Navbar = () => {
         spacing={!mobile ? 2 : 0}
       >
         <HorizontalStack>
-          <AiFillFileText
-            size={33}
-            onClick={() => navigate("/")}
-          />
+        <img src={NewLogo} alt="NHArts Music Forum Logo" style={{ width: '50px', height: '50px' }} onClick={() => navigate("/")} />
           <Typography className="title"
             sx={{ display: mobile ? "none" : "block" }}
             variant={navbarWidth ? "h6" : "h4"}
