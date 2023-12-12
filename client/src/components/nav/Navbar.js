@@ -91,7 +91,7 @@ function Navbar() {
           <Box component="form" onSubmit={handleSubmit}>
             <TextField
               size="small"
-              label="Search for posts..."
+              label="Look for threads..."
               sx={{ flexGrow: 1, maxWidth: 300 }}
               onChange={handleChange}
               value={search}
@@ -132,7 +132,7 @@ function Navbar() {
         <Box component="form" onSubmit={handleSubmit} mt={2}>
           <TextField
             size="small"
-            label="Search for posts..."
+            label="Look for threads"
             fullWidth
             onChange={handleChange}
             value={search}

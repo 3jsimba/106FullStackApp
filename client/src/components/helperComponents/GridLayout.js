@@ -6,11 +6,11 @@ function GridLayout(props) {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} md={8}>
-        {left}
-      </Grid>
-      <Grid item md={4} sx={{ display: { xs: "none", md: "block" } }}>
+      <Grid item xs={16} md={16}>
         {right}
+      </Grid>
+      <Grid item md={16} sx={{ display: { xs: "none", md: "block" } }}>
+      {left}
       </Grid>
     </Grid>
   );
