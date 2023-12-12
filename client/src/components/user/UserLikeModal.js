@@ -16,7 +16,8 @@ const styles = {
   },
 };
 
-const UserLikeModal = ({ postId, open, setOpen }) => {
+  function UserLikeModal ({ postId, open, setOpen }) {
+
   const [userLikes, setUserLikes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [hasMorePages, setHasMorePages] = useState(true);
@@ -39,6 +40,7 @@ const UserLikeModal = ({ postId, open, setOpen }) => {
     }
 
 
+    // 
     setLoading(false);
     if (data.success) {
       setUserLikes([...userLikes, ...data.userLikes]);
@@ -86,10 +88,13 @@ const UserLikeModal = ({ postId, open, setOpen }) => {
         sx={styles.container}
         ref={scrollBoxRef}
         onClick={(e) => {
+
           e.stopPropagation();
         }}
+
       >
         <Card>
+
           <Typography variant="h5" mb={2}>
             Liked by
           </Typography>
