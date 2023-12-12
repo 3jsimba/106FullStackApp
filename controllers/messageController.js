@@ -1,4 +1,6 @@
+
 const Conversation = require("../models/Conversation");
+
 const Message = require("../models/Message");
 const User = require("../models/User");
 const mongoose = require("mongoose");
@@ -31,6 +33,8 @@ const sendMessage = async (req, res) => {
       sender: userId,
       content,
     });
+    
+    console.log(conversation);
 
     conversation.lastMessageAt = Date.now();
 

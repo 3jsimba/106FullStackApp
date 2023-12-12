@@ -3,11 +3,12 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import "./markdown.css";
 
-const Markdown = ({ content }) => {
+function Markdown({ content }) {
   const disallowed = ["Image"];
 
   return (
     <Typography component="span">
+
       <ReactMarkdown
         className="markdown"
         style={{ "&p": { margin: 0 } }}
@@ -16,7 +17,14 @@ const Markdown = ({ content }) => {
         children={content}
       />
     </Typography>
+
   );
-};
+}
+
+//      />
+
+//     </Typography>
+//   );
+// };
 
 export default Markdown;
