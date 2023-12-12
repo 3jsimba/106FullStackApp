@@ -1,13 +1,10 @@
 import { Button, Card, Link, Stack, Typography } from "@mui/material";
-import { alignProperty } from "@mui/material/styles/cssUtils";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import { MdSettingsInputAntenna } from "react-icons/md";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { getPosts } from "../../api/posts";
 import { isLoggedIn } from "../../helpers/authHelper";
 import CreatePost from "../CreatePost";
-import Loading from "../Loading";
 import PostCard from "./PostCard";
 import SortBySelect from "../SortBySelect";
 import HorizontalStack from "../util/HorizontalStack";
@@ -56,7 +53,7 @@ const PostBrowser = (props) => {
       setCount(data.count);
     }
   };
-
+//react moment
   useEffect(() => {
     fetchPosts();
   }, [sortBy, effect]);
@@ -85,14 +82,7 @@ const PostBrowser = (props) => {
   const removePost = (removedPost) => {
     setPosts(posts.filter((post) => post._id !== removedPost._id));
   };
-
-  const handleBackToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
+//found a fix for this but i realy dont know how it works
   const contentTypeSorts = {
     posts: {
       "-createdAt": "Latest",
@@ -137,34 +127,7 @@ const PostBrowser = (props) => {
           />
         ))}
 
-        {loading && <Loading />}
-        {end ? (
-          <Stack py={5} alignItems="center">
-            <Typography variant="h5" color="text.secondary" gutterBottom>
-              {posts.length > 0 ? (
-                <>All posts have been viewed</>
-              ) : (
-                <>No posts available</>
-              )}
-            </Typography>
-            <Button variant="text" size="small" onClick={handleBackToTop}>
-              Back to top
-            </Button>
-          </Stack>
-        ) : (
-          !loading &&
-          posts &&
-          posts.length > 0 && (
-            <Stack pt={2} pb={6} alignItems="center" spacing={2}>
-              <Button onClick={fetchPosts} variant="contained">
-                Load more
-              </Button>
-              <Button variant="text" size="small" onClick={handleBackToTop}>
-                Back to top
-              </Button>
-            </Stack>
-          )
-        )}
+        
       </Stack>
     </>
   );
