@@ -22,7 +22,7 @@ import { isLoggedIn, logoutUser } from "../helpers/authHelper";
 import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 
-const Navbar = () => {
+function Navbar() {
   const navigate = useNavigate();
   const user = isLoggedIn();
 
