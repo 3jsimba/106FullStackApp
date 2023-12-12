@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Card,
   Divider,
   IconButton,
@@ -9,10 +8,8 @@ import {
 import React, { useEffect, useState } from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdRefresh } from "react-icons/md";
-import { Link } from "react-router-dom";
 import { getRandomUsers } from "../api/users";
 import Loading from "./Loading";
-import UserAvatar from "./UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 import UserEntry from "./UserEntry";
 
