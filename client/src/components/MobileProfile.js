@@ -1,7 +1,3 @@
-
-import { useTheme } from "@emotion/react";
-
-import { isLoggedIn } from "../helpers/authHelper";
 import {
   Card,
   Divider, Stack, Typography,

@@ -13,7 +13,7 @@ const CreatePostView = () => {
       <GoBack />
       <GridLayout left={<PostEditor />} right={<Sidebar />} />
     </Container>
-  );
+  );//wow so easy see
 };
 
 export default CreatePostView;

@@ -34,7 +34,7 @@ const PostView = () => {
   useEffect(() => {
     fetchPost();
   }, [params.id]);
-
+// dont know why this needs ot be here but it does so try to fix it glhf
   return (
     <Container>
       <Navbar />

@@ -13,7 +13,7 @@ const UserSchema = new mongoose.Schema(
         validator: (val) => !contains(val, " "),
         message: "Must contain no spaces",
       },
-    },
+    },//kinda anooying but i cant removie it for some reason
     email: {
       type: String,
       required: true,
@@ -24,11 +24,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       minLength: [8, "Must be at least 8 characters long"],
-    },
-    biography: {
-      type: String,
-      default: "",
-      maxLength: [250, "Must be at most 250 characters long"],
     },
     isAdmin: {
       type: Boolean,
