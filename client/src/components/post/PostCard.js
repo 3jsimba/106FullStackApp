@@ -1,3 +1,4 @@
+
 import {
   Card,
   IconButton,
@@ -9,7 +10,9 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { AiFillCheckCircle, AiFillEdit, AiFillMessage } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { deletePost, likePost, unlikePost, updatePost } from "../../api/posts";
+
+// imo
+import { deletePost, updatePost } from "../../api/posts";
 import { isLoggedIn } from "../../helpers/authHelper";
 import ContentDetails from "../content/ContentDetails";
 

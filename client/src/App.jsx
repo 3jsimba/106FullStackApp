@@ -1,3 +1,4 @@
+
 import './App.css';
 import react from "react";
 import "@mui/material";
@@ -5,7 +6,9 @@ import "react-icons";
 import "react-icons/bi";
 import "react-icons/md";
 import "react-icons/bs";
+
 import "react-router-dom";
+
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
@@ -35,6 +38,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <CssBaseline />
+
         <Routes>
           <Route path="/" element={<ExploreView />} />
           <Route path="/posts/:id" element={<PostView />} />
@@ -46,6 +50,7 @@ function App() {
               </PrivateRoute>
             }
           />
+
           <Route path="/search" element={<SearchView />} />
           <Route path="/users/:id" element={<ProfileView />} />
           <Route path="/login" element={<LoginView />} />
