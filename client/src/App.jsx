@@ -21,14 +21,14 @@ import {
 } from "react-router-dom";
 import theme from "./theme";
 
-import PostView from "./components/views/PostView";
-import CreatePostView from "./components/views/CreatePostView";
-import ProfileView from "./components/views/ProfileView";
-import LoginView from "./components/views/LoginView";
-import SignupView from "./components/views/SignupView";
-import ExploreView from "./components/views/ExploreView";
+import PostView from "./components/pages/PostView";
+import CreatePostView from "./components/pages/CreatePostView";
+import ProfileView from "./components/pages/ProfileView";
+import LoginView from "./components/pages/LoginView";
+import SignupView from "./components/pages/SignupView";
+import ExploreView from "./components/pages/ExploreView";
 import PrivateRoute from "./components/PrivateRoute";
-import SearchView from "./components/views/SearchView";
+import SearchView from "./components/pages/SearchView";
 import { initiateSocketConnection, socket } from "./helpers/socketHelper";
 
 function App() {

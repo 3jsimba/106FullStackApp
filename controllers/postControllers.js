@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const Post = require("../models/Post");
-const User = require("../models/User");
-const Comment = require("../models/Comment");
-const PostLike = require("../models/PostLike");
+const Post = require("../functions/Post");
+const User = require("../functions/User");
+const Comment = require("../functions/Comment");
+const PostLike = require("../functions/PostLike");
 const paginate = require("../util/paginate");
 const cooldown = new Set();
 

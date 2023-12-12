@@ -1,8 +1,8 @@
 
 // const baseURL =
-const Comment = require("../models/Comment");
+const Comment = require("../functions/Comment");
 const mongoose = require("mongoose");
-const Post = require("../models/Post");
+const Post = require("../functions/Post");
 const paginate = require("../util/paginate");
 const cooldown = new Set();
 
