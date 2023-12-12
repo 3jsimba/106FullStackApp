@@ -37,23 +37,10 @@ const ProfileView = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    const content = e.target.content.value;
-
-    await updateUser(user, { biography: content });
-
-    setProfile({ ...profile, user: { ...profile.user, biography: content } });
-    setEditing(false);
-  };
-
-  const handleEditing = () => {
-    setEditing(!editing);
-  };
-
-
+// BRUHHHHHHHHHHHHHHHHH
   useEffect(() => {
+    console.log('fetch user ');
     fetchUser();
   }, [location]);
 
@@ -98,8 +85,6 @@ const ProfileView = () => {
             <MobileProfile
               profile={profile}
               editing={editing}
-              handleSubmit={handleSubmit}
-              handleEditing={handleEditing}
               validate={validate}
             />
             <Stack spacing={2}>
@@ -121,8 +106,6 @@ const ProfileView = () => {
             <Profile
               profile={profile}
               editing={editing}
-              handleSubmit={handleSubmit}
-              handleEditing={handleEditing}
               validate={validate}
             />
             <FindUsers />
