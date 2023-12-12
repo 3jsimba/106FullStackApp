@@ -1,9 +1,6 @@
 import {
-  Alert,
   Button,
-  Checkbox,
   Container,
-  FormControlLabel,
   Stack,
   TextField,
   Typography,
@@ -52,9 +49,7 @@ const LoginView = () => {
         <Typography variant="h5" gutterBottom>
           Login
         </Typography>
-        <Typography color="text.secondary">
-          Don't have an account yet? <Link to="/signup">Sign Up</Link>
-        </Typography>
+
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
             label="Email Address"

@@ -79,9 +79,6 @@ const SignupView = () => {
         <Typography variant="h5" gutterBottom>
           Sign Up
         </Typography>
-        <Typography color="text.secondary">
-          Already have an account? <Link to="/login">Login</Link>
-        </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
             label="Username"
