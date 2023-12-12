@@ -7,6 +7,8 @@ import PostBrowser from "../post/PostBrowser";
 const ExploreView = () => {
   return (
     <Container>
+      {/* do a nav bar and link it here
+      yourewelcome */}
       <Navbar />
       <GridLayout
         left={<PostBrowser createPost contentType="posts" />}

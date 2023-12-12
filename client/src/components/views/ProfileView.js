@@ -4,6 +4,8 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { getUser, updateUser } from "../../api/users";
 import { isLoggedIn } from "../../helpers/authHelper";
 import CommentBrowser from "../comments/CommentBrowser";
+//yeah all this was taking from the main page but even though its not needed it breaks without
+
 
 import ErrorAlert from "../helperComponents/ErrorAlert";
 import FindUsers from "../FindUsers";
@@ -15,7 +17,7 @@ import PostBrowser from "../post/PostBrowser";
 import Profile from "../Profile";
 import ProfileTabs from "../ProfileTabs";
 
-const ProfileView = () => {
+const ProfileView = () => {//same thing here with all this stuff
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [editing, setEditing] = useState(false);
