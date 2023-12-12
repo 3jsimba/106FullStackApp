@@ -1,7 +1,7 @@
 import { Button, Card, Stack, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { createComment } from "../../api/posts";
 import { isLoggedIn } from "../../helpers/authHelper";
 import ErrorAlert from "../ErrorAlert";
@@ -53,11 +53,6 @@ const CommentEditor = ({ label, comment, addComment, setReplying }) => {
         <HorizontalStack justifyContent="space-between">
           <Typography variant="h5">
             {comment ? <>Reply</> : <>Comment</>}
-          </Typography>
-          <Typography>
-            <a href="https://commonmark.org/help/" target="_blank">
-              Markdown Help
-            </a>
           </Typography>
         </HorizontalStack>
 
