@@ -25,7 +25,6 @@ const ProfileView = () => {
   const user = isLoggedIn();
   const [error, setError] = useState("");
   const params = useParams();
-  const navigate = useNavigate();
   const location = useLocation();
 
   const fetchUser = async () => {
@@ -54,9 +53,6 @@ const ProfileView = () => {
     setEditing(!editing);
   };
 
-  const handleMessage = () => {
-    navigate("/messenger", { state: { user: profile.user } });
-  };
 
   useEffect(() => {
     fetchUser();
@@ -105,7 +101,6 @@ const ProfileView = () => {
               editing={editing}
               handleSubmit={handleSubmit}
               handleEditing={handleEditing}
-              handleMessage={handleMessage}
               validate={validate}
             />
             <Stack spacing={2}>
@@ -129,10 +124,8 @@ const ProfileView = () => {
               editing={editing}
               handleSubmit={handleSubmit}
               handleEditing={handleEditing}
-              handleMessage={handleMessage}
               validate={validate}
             />
-
             <FindUsers />
             <Footer />
           </Stack>

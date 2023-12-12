@@ -7,9 +7,8 @@ const UserAvatar = ({ username, height, width }) => {
       sx={{
         height: height,
         width: width,
-        backgroundColor: "lightgray",
       }}
-      src={"https://robohash.org/" + username}
+      src={"https://robohash.org/set_set4/" + username}
     />
   );
 };
