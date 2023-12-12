@@ -3,17 +3,13 @@ import {
   Container,
   Stack,
   TextField,
-  Typography,
-  Link,
-  Alert,
+  Typography, Link,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { signup } from "../../api/users";
 import { loginUser } from "../../helpers/authHelper";
-
-import { useNavigate, Router, Routs } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import ErrorAlert from "../ErrorAlert";
 import { isLength, isEmail, contains } from "validator";
 
@@ -83,9 +79,6 @@ const SignupView = () => {
         <Typography variant="h5" gutterBottom>
           Sign Up
         </Typography>
-        <Typography color="text.secondary">
-          Already have an account? <Link to="/login">Login</Link>
-        </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
             label="Username"
@@ -128,8 +121,6 @@ const SignupView = () => {
           <Button type="submit" fullWidth variant="contained" sx={{ my: 2 }}>
             Sign Up
           </Button>
-        </Box>
-        <Box sx={{ mt: 3 }}>
         </Box>
       </Stack>
     </Container>
