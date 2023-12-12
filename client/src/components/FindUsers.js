@@ -15,7 +15,13 @@ import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 import UserEntry from "./user/UserEntry";
 
-const FindUsers = () => {
+// / t FindUsers = () => {
+  function FindUsers() {
+// /  o
+
+  // function useState(arg0) {
+  //   throw new Error("Function not implemented.");
+  // }
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState(null);
 

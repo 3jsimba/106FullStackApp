@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { BiNoEntry } from "react-icons/bi";
 import HorizontalStack from "./util/HorizontalStack";
 
-const SortBySelect = ({ onSortBy, sortBy, sorts }) => {
+
+  function SortBySelect({ onSortBy, sortBy, sorts}) {
+
   return (
     <HorizontalStack spacing={1}>
       <Typography

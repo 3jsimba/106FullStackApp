@@ -1,3 +1,5 @@
+
+
 import {
   Button,
   Card,
@@ -8,14 +10,17 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { createPost } from "../api/posts";
-import ErrorAlert from "./helperComponents/ErrorAlert";
 import { isLoggedIn } from "../helpers/authHelper";
+import { useNavigate } from "react-router-dom";
+import ErrorAlert from "./helperComponents/ErrorAlert";
+import { createPost } from "../api/posts";
 import HorizontalStack from "./util/HorizontalStack";
 import UserAvatar from "./user/UserAvatar";
 
-const PostEditor = () => {
+  function PostEditor (){ 
+
+
+  // funciton isLoggedIn() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 

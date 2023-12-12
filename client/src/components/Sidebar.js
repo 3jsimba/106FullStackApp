@@ -2,7 +2,7 @@ import { Stack } from "@mui/material";
 import FindUsers from "./FindUsers";
 
 
-const Sidebar = () => {
+  function Sidebar(){
   return (
     <Stack spacing={2}>
       <FindUsers />
