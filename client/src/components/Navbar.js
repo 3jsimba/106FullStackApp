@@ -17,7 +17,7 @@ import {
 } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { isLoggedIn, logoutUser } from "../helpers/authHelper";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 
 const Navbar = () => {

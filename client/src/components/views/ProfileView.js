@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { getUser, updateUser } from "../../api/users";
 import { isLoggedIn } from "../../helpers/authHelper";
-import CommentBrowser from "../CommentBrowser";
+import CommentBrowser from "../comments/CommentBrowser";
 
 import ErrorAlert from "../ErrorAlert";
 import FindUsers from "../FindUsers";

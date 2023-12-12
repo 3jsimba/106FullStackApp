@@ -1,15 +1,17 @@
+
+
 import { Button, IconButton, Typography, useTheme } from "@mui/material";
 import { Box, compose } from "@mui/system";
 import React, { useState } from "react";
 import { AiFillEdit, AiOutlineLine, AiOutlinePlus } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import { isLoggedIn } from "../helpers/authHelper";
+import { isLoggedIn } from "../../helpers/authHelper";
 import CommentEditor from "./CommentEditor";
-import ContentDetails from "./ContentDetails";
-import HorizontalStack from "./util/HorizontalStack";
-import { deleteComment, updateComment } from "../api/posts";
-import ContentUpdateEditor from "./ContentUpdateEditor";
-import Markdown from "./Markdown";
+import ContentDetails from "../content/ContentDetails";
+import HorizontalStack from "../util/HorizontalStack";
+import { deleteComment, updateComment } from "../../api/posts";
+import ContentUpdateEditor from "../content/ContentUpdateEditor";
+import Markdown from "../Markdown";
 import { MdCancel } from "react-icons/md";
 import { BiReply, BiTrash } from "react-icons/bi";
 import { BsReply, BsReplyFill } from "react-icons/bs";
