@@ -1,6 +1,6 @@
 import { Avatar, AvatarGroup, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
-import HorizontalStack from "./util/HorizontalStack";
+import HorizontalStack from "../util/HorizontalStack";
 import { AiFillLike } from "react-icons/ai";
 import UserLikeModal from "./UserLikeModal";
 

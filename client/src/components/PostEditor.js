@@ -13,7 +13,7 @@ import { createPost } from "../api/posts";
 import ErrorAlert from "./ErrorAlert";
 import { isLoggedIn } from "../helpers/authHelper";
 import HorizontalStack from "./util/HorizontalStack";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "./user/UserAvatar";
 
 const PostEditor = () => {
   const navigate = useNavigate();

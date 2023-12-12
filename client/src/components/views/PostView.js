@@ -8,7 +8,7 @@ import PostCard from "../PostCard";
 import Sidebar from "../Sidebar";
 import { useParams } from "react-router-dom";
 import { getPost } from "../../api/posts";
-import Comments from "../Comments";
+import Comments from "../comments/Comments";
 import ErrorAlert from "../ErrorAlert";
 import { isLoggedIn } from "../../helpers/authHelper";
 
