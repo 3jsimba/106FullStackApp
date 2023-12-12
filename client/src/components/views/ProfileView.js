@@ -56,6 +56,9 @@ const ProfileView = () => {
 
   let tabs;
   if (profile) {
+    console.log('profile loaded', profile);
+    // profile not being loaded check with
+    // wegood
     tabs = {
       posts: (
         <PostBrowser
