@@ -83,8 +83,6 @@ const LoginView = () => {
             Login
           </Button>
         </Box>
-        <Box sx={{ mt: 3 }}>
-        </Box>
       </Stack>
     </Container>
   );
