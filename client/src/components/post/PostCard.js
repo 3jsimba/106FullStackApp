@@ -13,7 +13,6 @@ import { deletePost, likePost, unlikePost, updatePost } from "../../api/posts";
 import { isLoggedIn } from "../../helpers/authHelper";
 import ContentDetails from "../content/ContentDetails";
 
-import LikeBox from "../LikeBox";
 import PostContentBox from "./PostContentBox";
 import HorizontalStack from "../util/HorizontalStack";
 
@@ -24,7 +23,6 @@ import Markdown from "../Markdown";
 import "./postCard.css";
 import { MdCancel } from "react-icons/md";
 import { BiTrash } from "react-icons/bi";
-import UserLikePreview from "../user/UserLikePreview";
 
 const PostCard = (props) => {
   const { preview, removePost } = props;
@@ -40,7 +38,6 @@ const PostCard = (props) => {
   const [editing, setEditing] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const [post, setPost] = useState(postData);
-  const [likeCount, setLikeCount] = useState(post.likeCount);
 
   let maxHeight = null;
   if (preview === "primary") {
@@ -79,15 +76,6 @@ const PostCard = (props) => {
     setEditing(false);
   };
 
-  const handleLike = async (liked) => {
-    if (liked) {
-      setLikeCount(likeCount + 1);
-      await likePost(post._id, user);
-    } else {
-      setLikeCount(likeCount - 1);
-      await unlikePost(post._id, user);
-    }
-  };
 
   return (
     <Card sx={{ padding: 0 }} className="post-card">
@@ -103,11 +91,6 @@ const PostCard = (props) => {
               padding: theme.spacing(1),
             }}
           >
-            <LikeBox
-              likeCount={likeCount}
-              liked={post.liked}
-              onLike={handleLike}
-            />
           </Stack>
           <PostContentBox clickable={preview} post={post} editing={editing}>
             <HorizontalStack justifyContent="space-between">
@@ -186,10 +169,7 @@ const PostCard = (props) => {
                 </Typography>
               </HorizontalStack>
               <Box>
-                <UserLikePreview
-                  postId={post._id}
-                  userLikePreview={post.userLikePreview}
-                />
+               
               </Box>
             </HorizontalStack>
           </PostContentBox>

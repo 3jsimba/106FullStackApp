@@ -1,24 +1,5 @@
 import { BASE_URL } from "../config";
 
-const getUserLikedPosts = async (likerId, token, query) => {
-  try {
-    const res = await fetch(
-      BASE_URL +
-        "api/posts/liked/" +
-        likerId +
-        "?" +
-        new URLSearchParams(query),
-      {
-        headers: {
-          "x-access-token": token,
-        },
-      }
-    );
-    return await res.json();
-  } catch (err) {
-    console.log(err);
-  }
-};
 
 const getPosts = async (token, query) => {
   try {
@@ -31,8 +12,8 @@ const getPosts = async (token, query) => {
       }
     );
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -44,29 +25,12 @@ const getPost = async (postId, token) => {
       },
     });
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
-const getUserLikes = async (postId, anchor) => {
-  try {
-    const res = await fetch(
-      BASE_URL +
-        "api/posts/like/" +
-        postId +
-        "/users?" +
-        new URLSearchParams({
-          anchor,
-        })
-    );
-
-    return await res.json();
-  } catch (err) {
-    console.log(err);
-  }
-};
-
+// 
 const createPost = async (post, user) => {
   try {
     const res = await fetch(BASE_URL + "api/posts", {
@@ -79,8 +43,8 @@ const createPost = async (post, user) => {
       body: JSON.stringify(post),
     });
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -96,8 +60,8 @@ const updatePost = async (postId, user, data) => {
       body: JSON.stringify(data),
     });
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -110,8 +74,8 @@ const deletePost = async (postId, user) => {
       },
     });
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -120,8 +84,8 @@ const getComments = async (params) => {
     const { id } = params;
     const res = await fetch(BASE_URL + "api/comments/post/" + id);
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -132,8 +96,8 @@ const getUserComments = async (params) => {
       BASE_URL + "api/comments/user/" + id + "?" + new URLSearchParams(query)
     );
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -150,8 +114,8 @@ const createComment = async (comment, params, user) => {
       body: JSON.stringify(comment),
     });
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -167,8 +131,8 @@ const updateComment = async (commentId, user, data) => {
       body: JSON.stringify(data),
     });
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -181,38 +145,11 @@ const deleteComment = async (commentId, user) => {
       },
     });
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
-const likePost = async (postId, user) => {
-  try {
-    const res = await fetch(BASE_URL + "api/posts/like/" + postId, {
-      method: "POST",
-      headers: {
-        "x-access-token": user.token,
-      },
-    });
-    return res.json();
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-const unlikePost = async (postId, user) => {
-  try {
-    const res = await fetch(BASE_URL + "api/posts/like/" + postId, {
-      method: "DELETE",
-      headers: {
-        "x-access-token": user.token,
-      },
-    });
-    return res.json();
-  } catch (err) {
-    console.log(err);
-  }
-};
 
 export {
   getPost,
@@ -221,12 +158,8 @@ export {
   deletePost,
   getPosts,
   getUserComments,
-  getUserLikedPosts,
   getComments,
   createComment,
   deleteComment,
   updateComment,
-  likePost,
-  unlikePost,
-  getUserLikes,
 };

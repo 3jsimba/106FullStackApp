@@ -45,10 +45,6 @@ const MobileProfile = (props) => {
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <HorizontalStack spacing={3}>
                 <Stack alignItems="center">
-                  <Typography>Likes</Typography>
-                  <Typography color="text.secondary">
-                    <b>{props.profile.posts.likeCount}</b>
-                  </Typography>
                 </Stack>
                 <Stack alignItems="center">
                   <Typography color="text.secondary">Posts</Typography>
