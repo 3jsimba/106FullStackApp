@@ -1,6 +1,5 @@
 const User = require("../models/User");
 const Post = require("../models/Post");
-const PostLike = require("../models/PostLike");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Follow = require("../models/Follow");
@@ -51,8 +50,8 @@ const register = async (req, res) => {
     const token = jwt.sign(buildToken(user), process.env.TOKEN_KEY);
 
     return res.json(getUserDict(token, user));
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -81,9 +80,9 @@ const login = async (req, res) => {
     const token = jwt.sign(buildToken(user), process.env.TOKEN_KEY);
 
     return res.json(getUserDict(token, user));
-  } catch (err) {
-    console.log(err);
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -101,8 +100,8 @@ const follow = async (req, res) => {
     const follow = await Follow.create({ userId, followingId });
 
     return res.status(200).json({ data: follow });
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -123,8 +122,8 @@ const updateUser = async (req, res) => {
     await user.save();
 
     return res.status(200).json({ success: true });
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -142,8 +141,8 @@ const unfollow = async (req, res) => {
     await existingFollow.remove();
 
     return res.status(200).json({ data: existingFollow });
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -154,8 +153,8 @@ const getFollowers = async (req, res) => {
     const followers = await Follow.find({ followingId: userId });
 
     return res.status(200).json({ data: followers });
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -166,8 +165,8 @@ const getFollowing = async (req, res) => {
     const following = await Follow.find({ userId });
 
     return res.status(200).json({ data: following });
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -185,24 +184,17 @@ const getUser = async (req, res) => {
       .populate("poster")
       .sort("-createdAt");
 
-    let likeCount = 0;
-
-    posts.forEach((post) => {
-      likeCount += post.likeCount;
-    });
-
     const data = {
       user,
       posts: {
         count: posts.length,
-        likeCount,
         data: posts,
       },
     };
 
     return res.status(200).json(data);
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -226,9 +218,10 @@ const getRandomUsers = async (req, res) => {
     }
 
     return res.status(200).json(randomUsers);
-  } catch (err) {
-    console.log(err);
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    
+    console.log(error);
+    return res.status(400).json({ error: error.message });
   }
 };
 

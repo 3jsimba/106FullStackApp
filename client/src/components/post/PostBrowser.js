@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { MdSettingsInputAntenna } from "react-icons/md";
 import { useLocation, useSearchParams } from "react-router-dom";
-import { getPosts, getUserLikedPosts } from "../../api/posts";
+import { getPosts } from "../../api/posts";
 import { isLoggedIn } from "../../helpers/authHelper";
 import CreatePost from "../CreatePost";
 import Loading from "../Loading";
@@ -44,13 +44,7 @@ const PostBrowser = (props) => {
       if (searchExists) query.search = search.get("search");
 
       data = await getPosts(user && user.token, query);
-    } else if (props.contentType === "liked") {
-      data = await getUserLikedPosts(
-        props.profileUser._id,
-        user && user.token,
-        query
-      );
-    }
+    } 
 
     if (data.data.length < 10) {
       setEnd(true);
@@ -102,12 +96,7 @@ const PostBrowser = (props) => {
   const contentTypeSorts = {
     posts: {
       "-createdAt": "Latest",
-      "-likeCount": "Likes",
       "-commentCount": "Comments",
-      createdAt: "Earliest",
-    },
-    liked: {
-      "-createdAt": "Latest",
       createdAt: "Earliest",
     },
   };

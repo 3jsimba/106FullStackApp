@@ -1,6 +1,5 @@
 import { Backdrop, Box, Card, Modal, Stack, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
-import { getUserLikes } from "../../api/posts";
 import Loading from "../Loading";
 import UserEntry from "./UserEntry";
 
@@ -39,7 +38,6 @@ const UserLikeModal = ({ postId, open, setOpen }) => {
       anchor = userLikes[userLikes.length - 1].id;
     }
 
-    const data = await getUserLikes(postId, anchor);
 
     setLoading(false);
     if (data.success) {

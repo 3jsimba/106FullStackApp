@@ -9,7 +9,7 @@ const authSocket = (socket, next) => {
       const decoded = jwt.verify(token, process.env.TOKEN_KEY);
       socket.decoded = decoded;
       next();
-    } catch (err) {
+    } catch (error) {
       next(new Error("Authentication error"));
     }
   } else {

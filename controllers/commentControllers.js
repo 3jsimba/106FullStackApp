@@ -40,8 +40,8 @@ const createComment = async (req, res) => {
     await Comment.populate(comment, { path: "commenter", select: "-password" });
 
     return res.json(comment);
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -72,8 +72,8 @@ const getPostComments = async (req, res) => {
     }
 
     return res.json(rootComments);
-  } catch (err) {
-    return res.status(400).json(err.message);
+  } catch (error) {
+    return res.status(400).json(error.message);
   }
 };
 
@@ -91,8 +91,8 @@ const getUserComments = async (req, res) => {
       .populate("post");
 
     return res.json(comments);
-  } catch (err) {
-    return res.status(400).json(err.message);
+  } catch (error) {
+    return res.status(400).json(error.message);
   }
 };
 
@@ -120,8 +120,8 @@ const updateComment = async (req, res) => {
     await comment.save();
 
     return res.status(200).json(comment);
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -149,8 +149,8 @@ const deleteComment = async (req, res) => {
     await post.save();
 
     return res.status(200).json(comment);
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 

@@ -11,8 +11,8 @@ const signup = async (user) => {
       body: JSON.stringify(user),
     });
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -27,8 +27,8 @@ const login = async (user) => {
       body: JSON.stringify(user),
     });
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -36,8 +36,8 @@ const getUser = async (params) => {
   try {
     const res = await fetch(BASE_URL + "api/users/" + params.id);
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -47,8 +47,8 @@ const getRandomUsers = async (query) => {
       BASE_URL + "api/users/random?" + new URLSearchParams(query)
     );
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -64,8 +64,8 @@ const updateUser = async (user, data) => {
       body: JSON.stringify(data),
     });
     return res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 

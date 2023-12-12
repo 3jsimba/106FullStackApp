@@ -7,6 +7,9 @@ import CommentBrowser from "../comments/CommentBrowser";
 
 import ErrorAlert from "../ErrorAlert";
 import FindUsers from "../FindUsers";
+// import react from "react";
+
+// import GoBack from "../GoBack";
 import GoBack from "../GoBack";
 import GridLayout from "../GridLayout";
 import Loading from "../Loading";
@@ -65,13 +68,6 @@ const ProfileView = () => {
           profileUser={profile.user}
           contentType="posts"
           key="posts"
-        />
-      ),
-      liked: (
-        <PostBrowser
-          profileUser={profile.user}
-          contentType="liked"
-          key="liked"
         />
       ),
       comments: <CommentBrowser profileUser={profile.user} />,

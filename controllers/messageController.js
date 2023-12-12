@@ -37,9 +37,9 @@ const sendMessage = async (req, res) => {
     conversation.save();
 
     return res.json({ success: true });
-  } catch (err) {
-    console.log(err);
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -61,9 +61,9 @@ const getMessages = async (req, res) => {
       .limit(12);
 
     return res.json(messages);
-  } catch (err) {
-    console.log(err);
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -90,9 +90,9 @@ const getConversations = async (req, res) => {
     }
 
     return res.json(conversations);
-  } catch (err) {
-    console.log(err);
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({ error: error.message });
   }
 };
 

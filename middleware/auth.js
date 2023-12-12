@@ -17,8 +17,8 @@ const verifyToken = (req, res, next) => {
     };
 
     return next();
-  } catch (err) {
-    return res.status(400).json({ error: err.message });
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
   }
 };
 
@@ -32,7 +32,7 @@ const optionallyVerifyToken = (req, res, next) => {
     req.body.userId = decoded.userId;
 
     next();
-  } catch (err) {
+  } catch (error) {
     return next();
   }
 };

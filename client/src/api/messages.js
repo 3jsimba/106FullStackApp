@@ -8,8 +8,8 @@ const getConversations = async (user) => {
       },
     });
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -21,8 +21,8 @@ const getMessages = async (user, conversationId) => {
       },
     });
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -38,8 +38,8 @@ const sendMessage = async (user, message, recipientId) => {
       body: JSON.stringify(message),
     });
     return await res.json();
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };
 
