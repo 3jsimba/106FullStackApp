@@ -1,7 +1,7 @@
 import { Grid, Stack } from "@mui/material";
 import React from "react";
 
-const GridLayout = (props) => {
+function GridLayout(props) {
   const { left, right } = props;
 
   return (
