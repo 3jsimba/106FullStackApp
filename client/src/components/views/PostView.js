@@ -4,7 +4,7 @@ import GoBack from "../GoBack";
 import GridLayout from "../GridLayout";
 import Loading from "../Loading";
 import Navbar from "../Navbar";
-import PostCard from "../PostCard";
+import PostCard from "../post/PostCard";
 import Sidebar from "../Sidebar";
 import { useParams } from "react-router-dom";
 import { getPost } from "../../api/posts";

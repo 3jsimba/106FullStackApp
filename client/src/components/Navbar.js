@@ -1,4 +1,4 @@
-import { useTheme } from "@emotion/react";
+import './Navbar.css';
 import {
   IconButton,
   Stack,
@@ -10,6 +10,7 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import "react-icons/ai";
 import "react-icons/ri";
+
 import {
   AiFillFileText,
   AiFillHome,
@@ -23,7 +24,7 @@ import HorizontalStack from "./util/HorizontalStack";
 const Navbar = () => {
   const navigate = useNavigate();
   const user = isLoggedIn();
-  const theme = useTheme();
+
   const username = user && isLoggedIn().username;
   const [search, setSearch] = useState("");
   const [searchIcon, setSearchIcon] = useState(false);
@@ -77,18 +78,14 @@ const Navbar = () => {
         <HorizontalStack>
           <AiFillFileText
             size={33}
-            color={theme.palette.primary.main}
             onClick={() => navigate("/")}
           />
-          <Typography
+          <Typography className="title"
             sx={{ display: mobile ? "none" : "block" }}
             variant={navbarWidth ? "h6" : "h4"}
             mr={1}
-            color={theme.palette.primary.main}
           >
-            {/* <Link to="/" color="inherit"> */}
-              MusicIt
-            {/* </Link> */}
+            SoundWaveCentral
           </Typography>
         </HorizontalStack>
 
@@ -123,10 +120,10 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Button variant="text" sx={{ minWidth: 80 }} href="/signup">
+              <Button className='signup' variant="text" sx={{ minWidth: 80 }} href="/signup">
                 Sign Up
               </Button>
-              <Button variant="text" sx={{ minWidth: 65 }} href="/login">
+              <Button className='login' variant="text" sx={{ minWidth: 65 }} href="/login">
                 Login
               </Button>
             </>
