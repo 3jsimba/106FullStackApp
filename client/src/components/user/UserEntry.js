@@ -4,7 +4,8 @@ import UserAvatar from "./UserAvatar";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-function UserEntry(username) {
+function UserEntry({username}) {
+  
   return (
     <HorizontalStack justifyContent="space-between" key={username}>
       <HorizontalStack>
