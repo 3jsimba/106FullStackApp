@@ -172,15 +172,15 @@ const getPosts = async (req, res) => {
       .sort(sortBy)
       .lean();
 
-    if (author) {
-      posts = posts.filter((post) => post.poster.username == author);
-    }
+    // if (author) {
+    //   posts = posts.filter((post) => post.poster.username == author);
+    // }
 
-    if (search) {
-      posts = posts.filter((post) =>
-        post.title.toLowerCase().includes(search.toLowerCase())
-      );
-    }
+    // if (search) {
+    //   posts = posts.filter((post) =>
+    //     post.title.toLowerCase().includes(search.toLowerCase())
+    //   );
+    // }
 
     const count = posts.length;
 

@@ -48,7 +48,6 @@ CommentSchema.post("remove", async function (res, next) {
 
 CommentSchema.pre("save", function (next) {
   if (this.content.length > 0) {
-    this.content = filter.clean(this.content);
   }
 
   next();
