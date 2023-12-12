@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import GridLayout from "../GridLayout";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
-import PostBrowser from "../PostBrowser";
+import PostBrowser from "../post/PostBrowser";
 
 const ExploreView = () => {
   return (

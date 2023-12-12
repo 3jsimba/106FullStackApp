@@ -12,7 +12,7 @@ import GridLayout from "../GridLayout";
 import Loading from "../Loading";
 import MobileProfile from "../MobileProfile";
 import Navbar from "../Navbar";
-import PostBrowser from "../PostBrowser";
+import PostBrowser from "../post/PostBrowser";
 import Profile from "../Profile";
 import ProfileTabs from "../ProfileTabs";
 

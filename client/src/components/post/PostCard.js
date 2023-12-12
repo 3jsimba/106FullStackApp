@@ -9,22 +9,22 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { AiFillCheckCircle, AiFillEdit, AiFillMessage } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { deletePost, likePost, unlikePost, updatePost } from "../api/posts";
-import { isLoggedIn } from "../helpers/authHelper";
-import ContentDetails from "../components/content/ContentDetails";
+import { deletePost, likePost, unlikePost, updatePost } from "../../api/posts";
+import { isLoggedIn } from "../../helpers/authHelper";
+import ContentDetails from "../content/ContentDetails";
 
-import LikeBox from "./LikeBox";
+import LikeBox from "../LikeBox";
 import PostContentBox from "./PostContentBox";
-import HorizontalStack from "./util/HorizontalStack";
+import HorizontalStack from "../util/HorizontalStack";
 
 import {} from "react-icons/ai";
-import ContentUpdateEditor from "../components/content/ContentUpdateEditor";
-import Markdown from "./Markdown";
+import ContentUpdateEditor from "../content/ContentUpdateEditor";
+import Markdown from "../Markdown";
 
 import "./postCard.css";
 import { MdCancel } from "react-icons/md";
 import { BiTrash } from "react-icons/bi";
-import UserLikePreview from "./user/UserLikePreview";
+import UserLikePreview from "../user/UserLikePreview";
 
 const PostCard = (props) => {
   const { preview, removePost } = props;

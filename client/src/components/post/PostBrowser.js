@@ -4,13 +4,13 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { MdSettingsInputAntenna } from "react-icons/md";
 import { useLocation, useSearchParams } from "react-router-dom";
-import { getPosts, getUserLikedPosts } from "../api/posts";
-import { isLoggedIn } from "../helpers/authHelper";
-import CreatePost from "./CreatePost";
-import Loading from "./Loading";
+import { getPosts, getUserLikedPosts } from "../../api/posts";
+import { isLoggedIn } from "../../helpers/authHelper";
+import CreatePost from "../CreatePost";
+import Loading from "../Loading";
 import PostCard from "./PostCard";
-import SortBySelect from "./SortBySelect";
-import HorizontalStack from "./util/HorizontalStack";
+import SortBySelect from "../SortBySelect";
+import HorizontalStack from "../util/HorizontalStack";
 
 const PostBrowser = (props) => {
   const [posts, setPosts] = useState([]);
