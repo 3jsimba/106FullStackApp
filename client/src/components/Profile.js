@@ -1,20 +1,14 @@
 import { useTheme } from "@emotion/react";
 import {
-  Avatar,
-  Button,
   Card,
-  Divider,
   Stack,
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import { AiFillEdit } from "react-icons/ai";
 import { isLoggedIn } from "../helpers/authHelper";
-import ContentUpdateEditor from "../components/content/ContentUpdateEditor";
 import Loading from "./Loading";
 import UserAvatar from "./user/UserAvatar";
-import HorizontalStack from "./util/HorizontalStack";
 
 const Profile = (props) => {
   const [user, setUser] = useState(null);

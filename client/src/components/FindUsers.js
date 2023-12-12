@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Card,
   Divider,
   IconButton,
@@ -7,12 +6,9 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { AiOutlineUser } from "react-icons/ai";
 import { MdRefresh } from "react-icons/md";
-import { Link } from "react-router-dom";
 import { getRandomUsers } from "../api/users";
 import Loading from "./Loading";
-import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 import UserEntry from "./user/UserEntry";
 
@@ -40,20 +36,10 @@ const FindUsers = () => {
       <Stack spacing={2}>
         <HorizontalStack justifyContent="space-between">
           <HorizontalStack>
-            <AiOutlineUser />
-            <Typography>Find Others</Typography>
+            <Typography>Musicians</Typography>
           </HorizontalStack>
-          <IconButton
-            sx={{ padding: 0 }}
-            disabled={loading}
-            onClick={handleClick}
-          >
-            <MdRefresh />
-          </IconButton>
         </HorizontalStack>
-
         <Divider />
-
         {loading ? (
           <Loading />
         ) : (
