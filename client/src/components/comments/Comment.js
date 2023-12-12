@@ -130,17 +130,6 @@ const Comment = (props) => {
                     <IconButton
                       variant="text"
                       size="small"
-                      onClick={() => setEditing(!editing)}
-                    >
-                      {editing ? (
-                        <MdCancel color={iconColor} />
-                      ) : (
-                        <AiFillEdit color={iconColor} />
-                      )}
-                    </IconButton>
-                    <IconButton
-                      variant="text"
-                      size="small"
                       onClick={handleDelete}
                     >
                       <BiTrash color={theme.palette.error.main} />
