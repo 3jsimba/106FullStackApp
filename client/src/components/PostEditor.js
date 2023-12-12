@@ -10,7 +10,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createPost } from "../api/posts";
-import ErrorAlert from "./ErrorAlert";
+import ErrorAlert from "./helperComponents/ErrorAlert";
 import { isLoggedIn } from "../helpers/authHelper";
 import HorizontalStack from "./util/HorizontalStack";
 import UserAvatar from "./user/UserAvatar";

@@ -1,15 +1,15 @@
 import { Container, Stack } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import GoBack from "../GoBack";
-import GridLayout from "../GridLayout";
+import GoBack from "../helperComponents/GoBack";
+import GridLayout from "../helperComponents/GridLayout";
 import Loading from "../Loading";
-import Navbar from "../Navbar";
+import Navbar from "../nav/Navbar";
 import PostCard from "../post/PostCard";
 import Sidebar from "../Sidebar";
 import { useParams } from "react-router-dom";
 import { getPost } from "../../api/posts";
 import Comments from "../comments/Comments";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../helperComponents/ErrorAlert";
 import { isLoggedIn } from "../../helpers/authHelper";
 
 const PostView = () => {

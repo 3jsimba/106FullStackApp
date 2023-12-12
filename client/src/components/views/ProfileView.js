@@ -5,12 +5,12 @@ import { getUser, updateUser } from "../../api/users";
 import { isLoggedIn } from "../../helpers/authHelper";
 import CommentBrowser from "../comments/CommentBrowser";
 
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../helperComponents/ErrorAlert";
 import FindUsers from "../FindUsers";
-import GridLayout from "../GridLayout";
+import GridLayout from "../helperComponents/GridLayout";
 import Loading from "../Loading";
 import MobileProfile from "../MobileProfile";
-import Navbar from "../Navbar";
+import Navbar from "../nav/Navbar";
 import PostBrowser from "../post/PostBrowser";
 import Profile from "../Profile";
 import ProfileTabs from "../ProfileTabs";
