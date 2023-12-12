@@ -1,6 +1,5 @@
 import { useTheme } from "@emotion/react";
 import {
-  Avatar,
   IconButton,
   Stack,
   TextField,
@@ -20,7 +19,7 @@ import {
 } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { isLoggedIn, logoutUser } from "../helpers/authHelper";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 import { RiContrast2Line } from "react-icons/ri";
 

@@ -11,10 +11,10 @@ import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import { isLoggedIn } from "../helpers/authHelper";
-import ContentUpdateEditor from "./ContentUpdateEditor";
+import ContentUpdateEditor from "../components/content/ContentUpdateEditor";
 import Footer from "./Footer";
 import Loading from "./Loading";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 
 const Profile = (props) => {

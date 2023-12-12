@@ -12,9 +12,9 @@ import { MdRefresh } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { getRandomUsers } from "../api/users";
 import Loading from "./Loading";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
-import UserEntry from "./UserEntry";
+import UserEntry from "./user/UserEntry";
 
 const FindUsers = () => {
   const [loading, setLoading] = useState(true);
