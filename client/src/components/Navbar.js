@@ -5,7 +5,6 @@ import {
   TextField,
   Typography,
   Button,
-  InputAdornment,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
@@ -14,14 +13,12 @@ import "react-icons/ri";
 import {
   AiFillFileText,
   AiFillHome,
-  AiFillMessage,
   AiOutlineSearch,
 } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { isLoggedIn, logoutUser } from "../helpers/authHelper";
 import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
-import { RiContrast2Line } from "react-icons/ri";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -90,7 +87,7 @@ const Navbar = () => {
             color={theme.palette.primary.main}
           >
             {/* <Link to="/" color="inherit"> */}
-              PostIt
+              MusicIt
             {/* </Link> */}
           </Typography>
         </HorizontalStack>

@@ -12,7 +12,6 @@ import React, { useEffect, useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import { isLoggedIn } from "../helpers/authHelper";
 import ContentUpdateEditor from "../components/content/ContentUpdateEditor";
-import Footer from "./Footer";
 import Loading from "./Loading";
 import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
@@ -38,45 +37,7 @@ const Profile = (props) => {
           </Box>
 
           <Typography variant="h5">{user.username}</Typography>
-
-          {props.editing ? (
-            <Box>
-              <ContentUpdateEditor
-                handleSubmit={props.handleSubmit}
-                originalContent={user.biography}
-                validate={props.validate}
-              />
-            </Box>
-          ) : user.biography ? (
-            <Typography textAlign="center" variant="p">
-              <b>Bio: </b>
-              {user.biography}
-            </Typography>
-          ) : (
-            <Typography variant="p">
-              <i>No bio yet</i>
-            </Typography>
-          )}
-
-          {currentUser && user._id === currentUser.userId && (
-            <Box>
-              <Button
-                startIcon={<AiFillEdit color={iconColor} />}
-                onClick={props.handleEditing}
-              >
-                {props.editing ? <>Cancel</> : <>Edit bio</>}
-              </Button>
-            </Box>
-          )}
-
-          <HorizontalStack>
-            <Typography color="text.secondary">
-              Likes <b>{props.profile.posts.likeCount}</b>
-            </Typography>
-            <Typography color="text.secondary">
-              Posts <b>{props.profile.posts.count}</b>
-            </Typography>
-          </HorizontalStack>
+          
         </Stack>
       ) : (
         <Loading label="Loading profile" />
