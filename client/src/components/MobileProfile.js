@@ -1,28 +1,14 @@
-import { useTheme } from "@emotion/react";
-
 import {
-  Avatar,
-  Button,
   Card,
-  Divider,
-  IconButton,
-  Stack,
-  Typography,
+  Divider, Stack, Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import { AiFillEdit } from "react-icons/ai";
-import { MdCancel } from "react-icons/md";
-import { isLoggedIn } from "../helpers/authHelper";
-import ContentUpdateEditor from "../components/content/ContentUpdateEditor";
 import UserAvatar from "./user/UserAvatar";
 import HorizontalStack from "./util/HorizontalStack";
 
 const MobileProfile = (props) => {
   const [user, setUser] = useState(null);
-  const currentUser = isLoggedIn();
-  const theme = useTheme();
-  const iconColor = theme.palette.primary.main;
 
   useEffect(() => {
     if (props.profile) {
@@ -56,50 +42,7 @@ const MobileProfile = (props) => {
             </Box>
           </HorizontalStack>
           <Divider />
-          <Box>
-            {currentUser && user._id === currentUser.userId && (
-              <IconButton onClick={props.handleEditing} sx={{ mr: 1 }}>
-                {props.editing ? (
-                  <MdCancel color={iconColor} />
-                ) : (
-                  <AiFillEdit color={iconColor} />
-                )}
-              </IconButton>
-            )}
-            {user.biography ? (
-              <>
-                <Typography textAlign="center" variant="p">
-                  <b>Bio: </b>
-                  {user.biography}
-                </Typography>
-              </>
-            ) : (
-              <Typography variant="p">
-                <i>
-                  No bio yet{" "}
-                  {currentUser && user._id === currentUser.userId && (
-                    <span>- Tap on the edit icon to add your bio</span>
-                  )}
-                </i>
-              </Typography>
-            )}
-            {currentUser && user._id !== currentUser.userId && (
-              <Box sx={{ mt: 2 }}>
-                <Button variant="outlined" onClick={props.handleMessage}>
-                  Message
-                </Button>
-              </Box>
-            )}
-            {props.editing && (
-              <Box>
-                <ContentUpdateEditor
-                  handleSubmit={props.handleSubmit}
-                  originalContent={user.biography}
-                  validate={props.validate}
-                />
-              </Box>
-            )}
-          </Box>
+
         </Stack>
       ) : (
         <>Loading...</>
@@ -107,5 +50,5 @@ const MobileProfile = (props) => {
     </Card>
   );
 };
-
+   
 export default MobileProfile;
