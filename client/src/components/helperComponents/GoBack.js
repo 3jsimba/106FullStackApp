@@ -7,7 +7,7 @@ function GoBack() {
 
   return (
     <Typography sx={{ mb: 2 }}>
-      <Link to="/"> &lt;&lt; Go back to posts</Link>
+      <Link to="/"> &lt;&lt; Go Back</Link>
     </Typography>
   );
 };
