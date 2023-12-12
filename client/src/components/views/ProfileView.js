@@ -5,12 +5,14 @@ import { getUser, updateUser } from "../../api/users";
 import { isLoggedIn } from "../../helpers/authHelper";
 import CommentBrowser from "../comments/CommentBrowser";
 //yeah all this was taking from the main page but even though its not needed it breaks without
-import ErrorAlert from "../ErrorAlert";
+
+
+import ErrorAlert from "../helperComponents/ErrorAlert";
 import FindUsers from "../FindUsers";
-import GridLayout from "../GridLayout";
+import GridLayout from "../helperComponents/GridLayout";
 import Loading from "../Loading";
 import MobileProfile from "../MobileProfile";
-import Navbar from "../Navbar";
+import Navbar from "../nav/Navbar";
 import PostBrowser from "../post/PostBrowser";
 import Profile from "../Profile";
 import ProfileTabs from "../ProfileTabs";

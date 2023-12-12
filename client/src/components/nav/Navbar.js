@@ -11,16 +11,16 @@ import React, { useEffect, useState } from "react";
 import "react-icons/ai";
 import "react-icons/ri";
 // import NewLogo from ''; // Adjust the path as necessary
-import NewLogo from '../../src/nharts.jpg'
+import NewLogo from '../../../src/nharts.jpg'
 
 import {
   AiFillHome,
   AiOutlineSearch,
 } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import { isLoggedIn, logoutUser } from "../helpers/authHelper";
-import UserAvatar from "./user/UserAvatar";
-import HorizontalStack from "./util/HorizontalStack";
+import { isLoggedIn, logoutUser } from "../../helpers/authHelper";
+import UserAvatar from "../user/UserAvatar";
+import HorizontalStack from "../util/HorizontalStack";
 
 function Navbar() {
   const navigate = useNavigate();

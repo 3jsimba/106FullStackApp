@@ -1,7 +1,7 @@
 import { Card, Tab, Tabs } from "@mui/material";
 import React from "react";
 
-const ProfileTabs = (props) => {
+  function ProfileTabs(props){
   const handleChange = (e, newValue) => {
     props.setTab(newValue);
   };

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { createComment } from "../../api/posts";
 import { isLoggedIn } from "../../helpers/authHelper";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../helperComponents/ErrorAlert";
 import HorizontalStack from "../util/HorizontalStack";
 
 const CommentEditor = ({ label, comment, addComment, setReplying }) => {

@@ -1,6 +1,6 @@
 import {Container} from "@mui/material";
-import GridLayout from "../GridLayout";
-import Navbar from "../Navbar";
+import GridLayout from "../helperComponents/GridLayout";
+import Navbar from "../nav/Navbar";
 import Sidebar from "../Sidebar";
 import PostBrowser from "../post/PostBrowser";
 

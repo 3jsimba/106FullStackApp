@@ -1,4 +1,8 @@
+
+
 import { useTheme } from "@emotion/react";
+
+import UserAvatar from "./user/UserAvatar";
 import {
   Avatar,
   Button,
@@ -7,16 +11,16 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { Box } from "@mui/system";
+
 import React, { useEffect, useState } from "react";
-import { AiFillEdit } from "react-icons/ai";
 import { isLoggedIn } from "../helpers/authHelper";
+import { Box } from "@mui/system";
 import ContentUpdateEditor from "../components/content/ContentUpdateEditor";
 import Loading from "./Loading";
-import UserAvatar from "./user/UserAvatar";
+import { AiFillEdit } from "react-icons/ai";
 import HorizontalStack from "./util/HorizontalStack";
 
-const Profile = (props) => {
+  function Profile (props){
   const [user, setUser] = useState(null);
   const currentUser = isLoggedIn();
   const theme = useTheme();
