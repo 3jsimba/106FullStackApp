@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const { isEmail, contains } = require("validator");
-const filter = require("../util/filter");
 
 const UserSchema = new mongoose.Schema(
   {

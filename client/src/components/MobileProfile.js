@@ -1,13 +1,25 @@
+
+import { useTheme } from "@emotion/react";
+
+import { isLoggedIn } from "../helpers/authHelper";
 import {
   Card,
   Divider, Stack, Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import UserAvatar from "./user/UserAvatar";
+atar from "./user/UserAvatar";
+
+import React, { useEffect, useState } from "react";
+
 import HorizontalStack from "./util/HorizontalStack";
 
-const MobileProfile = (props) => {
+// function isLoggedIn() {
+//   throw new Error("Function not implemented.");
+// }
+
+function MobileProfile(props) {
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -41,8 +53,7 @@ const MobileProfile = (props) => {
               </HorizontalStack>
             </Box>
           </HorizontalStack>
-          <Divider />
-
+          <Divider />2
         </Stack>
       ) : (
         <>Loading...</>

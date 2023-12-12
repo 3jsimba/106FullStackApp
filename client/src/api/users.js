@@ -69,4 +69,6 @@ const updateUser = async (user, data) => {
   }
 };
 
+// routes
+
 export { signup, login, getUser, getRandomUsers, updateUser };
