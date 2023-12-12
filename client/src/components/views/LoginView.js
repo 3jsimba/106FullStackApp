@@ -5,7 +5,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../api/users";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../helperComponents/ErrorAlert";
 import { loginUser } from "../../helpers/authHelper";
 
 const LoginView = () => {

@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import { signup } from "../../api/users";
 import { loginUser } from "../../helpers/authHelper";
 import { useNavigate } from "react-router-dom";
-import ErrorAlert from "../ErrorAlert";
+import ErrorAlert from "../helperComponents/ErrorAlert";
 import { isLength, isEmail, contains } from "validator";
 
 const SignupView = () => {
