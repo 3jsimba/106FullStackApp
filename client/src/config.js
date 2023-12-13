@@ -1,3 +1,3 @@
-let BASE_URL = "http://localhost:4000/";
+let BASE_URL = "https://dripland.live/";
 
 export { BASE_URL };
